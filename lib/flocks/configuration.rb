@@ -31,9 +31,6 @@ module Flocks
     # Key used to indicate whether or not a follow should be pending or not.
     attr_writer :pending_follow
 
-    # Default key used to indicate the scope for the current call
-    attr_writer :default_scope_key
-
     # Page size to be used when paging through the various types of relationships.
     attr_writer :page_size
 
@@ -51,11 +48,6 @@ module Flocks
     #     configuration.followers_key = 'followers'
     #     configuration.blocked_key = 'blocked'
     #     configuration.blocked_by_key = 'blocked_by'
-    #     configuration.reciprocated_key = 'reciprocated'
-    #     configuration.pending_key = 'pending'
-    #     configuration.pending_with_key = 'pending_with'
-    #     configuration.default_scope_key = 'default'
-    #     configuration.pending_follow = false
     #     configuration.page_size = 25
     #   end
     def configure
@@ -102,13 +94,6 @@ module Flocks
     # @return the key used in Redis for tracking who has reciprocated a follow for an individual or the default of 'reciprocated' if not set.
     def reciprocated_key
       @reciprocated_key ||= 'reciprocated'
-    end
-
-    # Default key used in Redis for tracking scope for the given relationship calls.
-    #
-    # @return the default key used in Redis for tracking scope for the given relationship calls.
-    def default_scope_key
-      @default_scope_key ||= 'default'
     end
 
     # Page size to be used when paging through the various types of relationships.

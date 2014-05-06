@@ -16,7 +16,7 @@ module Flocks
     def follow(other_user_id, other_username)
       return if (user_id == other_user_id) || (blocked? other_user_id)
 
-      other_username_score = other_username.score
+      other_username_score = rank_username(other_username)
       redis.zadd relationship_following_key, other_username_score, other_user_id
       redis.zadd relationship_followers_key(other_user_id), username_score, user_id
     end
@@ -77,6 +77,8 @@ module Flocks
     def blocked?(other_user_id)
       blocked.include? other_user_id.to_s
     end
+
+    protected
 
     def bounds(page, limit)
       [(page - 1) * limit, (page * limit) - 1]
