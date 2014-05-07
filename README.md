@@ -13,8 +13,8 @@ Flocks search capabilities can be used to autocomplete text fields with username
 
 For example, if a user is following: 'Adam', 'Aaron', 'Addison', and 'John'
 
-Searching for 'a' will return the ids associated with Adam, Aaron, and Addison
-Searching for 'ad' will return the id associated with Adam
+Searching for 'a' will return the ids associated with Adam, Aaron, and Addison.
+Searching for 'ad' will return the id associated with Adam.
 
 
 ## Installation
@@ -135,7 +135,7 @@ Many thanks to [amico](https://github.com/agoragames/amico) creator [agoragames]
 
 ## Contributing
 
-1. Fork it ( http://github.com/<my-github-username>/flocks/fork )
+1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
