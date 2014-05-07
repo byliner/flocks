@@ -11,10 +11,9 @@ By requiring usernames when establishing relationships, Flocks becomes searchabl
 Flocks will return all user ids with user_ids matching the query string.
 Flocks search capabilities can be used to autocomplete text fields with usernames in a user's social graph.
 
-For example, if a user is following: 'Adam', 'Aaron', 'Addison', and 'John'
-
-Searching for 'a' will return the ids associated with Adam, Aaron, and Addison.
-Searching for 'ad' will return the id associated with Adam.
+For example, if a user is following: 'Adam', 'Aaron', 'Addison', and 'John':
+* Searching for 'a' will return the ids associated with Adam, Aaron, and Addison.
+* Searching for 'ada' will return the id associated with Adam.
 
 
 ## Installation
